@@ -2,11 +2,12 @@ public abstract class Cuenta {
 
     protected double saldo;
     protected double tasa;
-    protected String id;
+    public int id;
 
-    public Cuenta(double saldo, double tasa, String id) {
+    public Cuenta(double saldo, double tasa, int id) {
         this.saldo = saldo;
         this.tasa = tasa;
+        this.id = id;
     }
 
     //getters
@@ -18,7 +19,7 @@ public abstract class Cuenta {
         return tasa;
     }
 
-    public String getId(){
+    public int getId(){
         return id;
     }
 

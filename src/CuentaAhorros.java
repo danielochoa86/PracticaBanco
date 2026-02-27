@@ -1,6 +1,6 @@
 public class CuentaAhorros extends Cuenta{
 
-    public CuentaAhorros(double saldo, double tasa, String id) {
+    public CuentaAhorros(double saldo, double tasa, int id) {
         super(saldo, tasa, id);
     }
 

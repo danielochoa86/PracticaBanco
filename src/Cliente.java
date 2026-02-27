@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Cliente {
     private String nombre;
@@ -6,15 +7,20 @@ public class Cliente {
     private LocalDate DOB;
     private String ocupacion;
     private String residencia;
+    private String password;
+    private String email;
+    private ArrayList<Cuenta> Cuentas = new ArrayList<Cuenta>();
 
-    public Cliente(String nombre, String id, LocalDate DOB, String ocupacion, String residencia) {
+    public Cliente(String nombre, String id, LocalDate DOB, String ocupacion,
+                   String residencia, String password, String email) {
         this.nombre = nombre;
         this.id = id;
         this.DOB = DOB;
         this.ocupacion = ocupacion;
         this.residencia = residencia;
+        this.password = password;
+        this.email = email;
     }
-
 
     //getters
     public String getNombre() {
@@ -35,6 +41,18 @@ public class Cliente {
 
     public String getResidencia() {
         return residencia;
+    }
+
+    public ArrayList<Cuenta> getCuentas() {
+        return Cuentas;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getEmail() {
+        return email;
     }
 
     //setters
@@ -59,10 +77,21 @@ public class Cliente {
         this.residencia = residencia;
     }
 
-    public String toString(){
-        return System.out.println("El cliente: " + nombre + "creado.");
+    public void setPassword(String password) {
+        this.password = password;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void addCuentas(Cuenta cuenta) {
+        Cuentas.add(cuenta);
+    }
+
+    public String toString(){
+        return "El cliente: " + nombre + "creado.";
+    }
 
 
 }

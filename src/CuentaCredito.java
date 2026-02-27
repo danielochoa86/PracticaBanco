@@ -1,6 +1,6 @@
 public class CuentaCredito extends Cuenta{
 
-    public CuentaCredito(double saldo, double tasa, String id) {
+    public CuentaCredito(double saldo, double tasa, int id) {
        super(0, tasa, id);
     }
 
