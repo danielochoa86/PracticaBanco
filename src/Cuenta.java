@@ -2,9 +2,9 @@ public abstract class Cuenta {
 
     protected double saldo;
     protected double tasa;
-    public int id;
+    public String id;
 
-    public Cuenta(double saldo, double tasa, int id) {
+    public Cuenta(double saldo, double tasa, String id) {
         this.saldo = saldo;
         this.tasa = tasa;
         this.id = id;
@@ -19,7 +19,7 @@ public abstract class Cuenta {
         return tasa;
     }
 
-    public int getId(){
+    public String getId(){
         return id;
     }
 
@@ -29,6 +29,11 @@ public abstract class Cuenta {
     }
 
     //metodos
+    public String toString(){
+        return "No. Cuenta: " + id +
+                "\nSaldo: " + saldo;
+    }
+
     public void retirar(double retiro){
         this.saldo = saldo - retiro;
     }

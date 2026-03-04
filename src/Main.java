@@ -2,7 +2,8 @@ public class Main {
 
     public void main (String[] args){
 
-        Menu_Cliente menu = new Menu_Cliente();
+        Banco banco = new Banco();
+        Menu menu = new Menu(banco);
         menu.ejecutar();
 
     }
